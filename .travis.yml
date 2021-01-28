@@ -1,0 +1,16 @@
+# .travis.yml
+language: ruby
+
+services:
+  - docker
+
+before_install:
+- make pull_image
+- make build_image
+
+script:
+- make test_app
+
+branches:
+  only:
+    - master

@@ -46,7 +46,7 @@ test_app:
 	@echo "start 'test_app' --> run flask app testing"
 	@echo ""
 	docker-compose up -d; \
-	docker exec app1 bash -c 'make tests'; \
+	docker exec app1 bash -c 'pytest tests'; \
 	docker-compose down;
 
 
