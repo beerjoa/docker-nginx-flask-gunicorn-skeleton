@@ -26,7 +26,7 @@ pull_image:
 	@echo "start 'pull_image' --> Pull docker images"
 	@echo ""
 	docker pull nginx:stable; 
-	docker pull centos/python-38-centos7;
+	docker pull centos/python-38-centos7:latest;
 
 build_image:
 	@echo "start 'build_image' --> Build docker image for flask app"
@@ -45,8 +45,9 @@ clean_image:
 test_app:
 	@echo "start 'test_app' --> run flask app testing"
 	@echo ""
+	docker images
 	docker-compose up -d; \
-	docker exec app1 bash -c 'make tests'; \
+	docker exec app1 bash -c 'pytest tests'; \
 	docker-compose down;
 
 

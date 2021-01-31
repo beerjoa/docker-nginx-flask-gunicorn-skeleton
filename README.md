@@ -1,5 +1,7 @@
 # docker-nginx-flask-gunicorn-skeleton
 
+[![Build Status](https://travis-ci.com/beerjoa/docker-nginx-flask-gunicorn-skeleton.svg?branch=master)](https://travis-ci.com/beerjoa/docker-nginx-flask-gunicorn-skeleton)
+
 ##### [status code WIKI](https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C#3xx_(%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98_%EC%99%84%EB%A3%8C))
 ##### [flask restplus error handling](https://flask-restplus.readthedocs.io/en/stable/errors.html)
 

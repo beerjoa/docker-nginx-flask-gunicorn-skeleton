@@ -5,17 +5,17 @@ services:
     shm_size: '1000000000'
     image: centos-flask-temp:latest
     environment:
-        WORK_DIR: 'app'
+        WORK_DIR: 'app/sample-flask'
     tty: true
     expose:
       - 8080
     ports:
       - '8080:8080'
     volumes:
-      - './app/src:/home/user'
+      - './app/sample-flask:/home/user'
       - '/usr/share/zoneinfo/Asia/Seoul:/etc/localtime:ro'
     command: >
-      bash -c "gunicorn -c gunicorn_config.py wsgi:app"
+      bash -c "gunicorn -c gunicorn_config.py 'run:create_app()'"
 
 
   nginx:
